@@ -22,16 +22,17 @@ function Home() {
       return;
     }
 
-    const { avatar_url, login, location, followers, following } = data;
+    const { avatar_url, public_repos, login, location, followers, following } = data;
 
     const userData: UserProps = {
       avatar_url,
+      public_repos,
       login,
       location,
       followers,
       following,
     };
-
+    console.log(data)
     setUser(userData);
   };
 

@@ -6,6 +6,7 @@ const User = ({
   login,
   avatar_url,
   followers,
+  public_repos,
   following,
   location,
 }: UserProps) => {
@@ -13,6 +14,7 @@ const User = ({
     <div className="flex flex-col gap-4 text-2xl rounded-xl justify-center items-center p-4 bg-white/20 max-md:w-19/20 md:w-[740px]">
       <img src={avatar_url} alt={login} className="rounded-full w-80 border-4 border-[#0e1129]" />
       <h2 className="text-3xl">{login}</h2>
+      <p>Repositórios: {public_repos}</p>
       {location && (
         <p className="flex gap-5 items-center">
           <Pin />
