@@ -1,5 +1,5 @@
 type SearchProps = {
-  loadUser: (userName: string) => Promisse<void>;
+  loadUser: (userName: string) => Promise<void>;
 };
 
 import { useState, KeyboardEvent } from "react";
