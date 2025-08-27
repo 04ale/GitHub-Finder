@@ -1,5 +1,4 @@
 import type { UserProps } from "../types/user-types";
-import { Link } from "react-router-dom";
 import { Pin } from "lucide-react";
 
 const User = ({
@@ -9,6 +8,7 @@ const User = ({
   public_repos,
   following,
   location,
+  setToggle
 }: UserProps) => {
   return (
     <div className="flex flex-col gap-4 text-2xl rounded-xl justify-center items-center p-4 bg-white/20 max-md:w-19/20 md:w-[740px]">
@@ -32,7 +32,7 @@ const User = ({
           <p>{following}</p>
         </div>
       </div>
-      <Link to={`/repos/${login}`} className="py-5 px-15 bg-[#0e1129] hover:bg-[#15193a] rounded-2xl">Ver melhores projetos</Link>
+      <button onClick={()=>setToggle(true)} className="py-5 px-15 bg-[#0e1129] hover:bg-[#15193a] rounded-2xl cursor-pointer">Ver projetos</button>
     </div>
   );
 };
